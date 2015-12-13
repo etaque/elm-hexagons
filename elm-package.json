@@ -1,5 +1,5 @@
 {
-    "version": "1.0.0",
+    "version": "1.0.1",
     "summary": "Hexagonal grids computing",
     "repository": "https://github.com/etaque/elm-hexagons.git",
     "license": "BSD3",
