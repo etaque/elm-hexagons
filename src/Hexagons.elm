@@ -1,6 +1,6 @@
 module Hexagons (Axial, Point, dims, axialToPoint, pointToAxial, axialLine, axialDistance, axialRange) where
 
-{-| Suite of functions for horizontal hex grid handling, focused on horizontal grids ("pointy topped" hexagons) with axial coordinate system.
+{-| Suite of functions for hexagonal grid computing, focused on horizontal grids ("pointy topped" hexagons) with axial coordinate system.
 
 See http://www.redblobgames.com/grids/hexagons for reference.
 
@@ -30,7 +30,7 @@ type alias Axial = (Int, Int)
 type alias Point = (Float, Float)
 
 
-{-| given radius, returns width and height of hexagon
+{-| Given radius, returns width and height of hexagon
 -}
 dims : Float -> (Float, Float)
 dims hexRadius =
@@ -64,15 +64,17 @@ pointToAxial axialRadius (x, y) =
 
 
 {-| List all hexagons composing a line between two hexagons.
-See http://www.redblobgames.com/grids/axialagons/#line-drawing
+
+See [Line Drawing](http://www.redblobgames.com/grids/hexagons/#line-drawing) on Red Blob Games
  -}
 axialLine : Axial -> Axial -> List Axial
 axialLine a b =
   List.map cubeToAxial (cubeLine (axialToCube a) (axialToCube b))
 
 
-{-| List all hexagons within given distance of this one
-See http://www.redblobgames.com/grids/axialagons/#range
+{-| List all hexagons within given distance of this one.
+
+See [Range](http://www.redblobgames.com/grids/hexagons/#range) on Red Blob Games
 -}
 axialRange : Axial -> Int -> List Axial
 axialRange center n =
