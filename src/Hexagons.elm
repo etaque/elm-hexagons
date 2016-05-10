@@ -1,4 +1,4 @@
-module Hexagons (Axial, Point, dims, axialToPoint, pointToAxial, axialLine, axialDistance, axialRange) where
+module Hexagons exposing (Axial, Point, dims, axialToPoint, pointToAxial, axialLine, axialDistance, axialRange)
 
 {-| Suite of functions for hexagonal grid computing, focused on horizontal grids ("pointy topped" hexagons) with axial coordinate system.
 

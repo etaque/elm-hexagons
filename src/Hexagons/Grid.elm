@@ -1,4 +1,4 @@
-module Hexagons.Grid (Grid, Row, Tile, get, set, delete, list, getPoint) where
+module Hexagons.Grid exposing (Grid, Row, Tile, get, set, delete, list, getPoint)
 
 {-| A naive grid storage for hexagons: `Dict Int (Dict Int a)`
 
